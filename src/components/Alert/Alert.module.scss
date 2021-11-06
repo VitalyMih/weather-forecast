@@ -1,0 +1,7 @@
+@import "../../scss/AdaptivValue.scss";
+
+.Alert {
+  position: absolute;
+  color: red;
+  @include adaptiv-value("font-size", 16, 12, 1);
+}

@@ -3,10 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {applyMiddleware, createStore} from "redux";
+import thunk from "redux-thunk";
+import {Provider} from "react-redux";
+import {rootReducer} from "./redux/rootReducer";
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+const app = (
+    <Provider store={store}>
+        <App />
+    </Provider>
+)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      {app}
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,114 @@
+@import "../../scss/AdaptivValue.scss";
+
+.CityCard {
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+}
+
+.date {
+  color: orangered;
+  @include adaptiv-value("font-size", 16, 12, 1);
+}
+
+.name {
+  font-weight: bold;
+  @include adaptiv-value("font-size", 26, 18, 1);
+  padding: 5px 0;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.degrees {
+  @include adaptiv-value("font-size", 28, 20, 1);
+}
+
+.image {
+  @include adaptiv-value("width", 80, 40, 1);
+  img {
+    width: 100%;
+  }
+}
+
+.weather {
+  font-weight: bold;
+  @include adaptiv-value("font-size", 16, 12, 1);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 300px;
+  margin-top: 10px;
+  padding: 5px 0 5px 20px;
+  @include adaptiv-value("font-size", 16, 12, 1);
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: orangered;
+  }
+}
+
+.rain {
+  display: flex;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  img {
+    @include adaptiv-value("height", 16, 12, 1);
+    margin-right: 3px;
+  }
+}
+
+.snow {
+  display: flex;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  img {
+    @include adaptiv-value("height", 16, 12, 1);
+    margin-right: 3px;
+  }
+}
+
+.wind {
+  display: flex;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  img {
+    @include adaptiv-value("height", 16, 12, 1);
+    margin-right: 3px;
+  }
+}
+
+.pressure {
+  display: flex;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  img {
+    @include adaptiv-value("height", 16, 12, 1);
+    margin-right: 3px;
+  }
+}
+
+.humidity {
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+.visibility {
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+.clouds {
+  padding-right: 20px;
+  padding-bottom: 5px;
+}

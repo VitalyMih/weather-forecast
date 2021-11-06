@@ -1,0 +1,190 @@
+@import "../../../scss/AdaptivValue.scss";
+
+.ForecastCard {
+  
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+  border-radius: 7px;
+  padding: 0 5px;
+  cursor: pointer;
+  @include adaptiv-value("font-size", 16, 12, 1);
+  font-weight: bold;
+  background-color: #d1d1d1;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.button {
+  height: 20px;
+  img {
+    height: 100%;
+  }
+}
+
+.top {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 50px;
+  img {
+    height: 100%;
+  }
+}
+
+.content {
+
+}
+
+.description {
+  font-weight: bold;
+  @include adaptiv-value("font-size", 16, 12, 1);
+  margin-bottom: 10px;
+}
+
+.text {
+  @include adaptiv-value("font-size", 16, 12, 1);
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 300px;
+  margin-top: 10px;
+  padding: 5px 0 5px 20px;
+  @include adaptiv-value("font-size", 16, 12, 1);
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: orangered;
+  }
+}
+
+.rain {
+  display: flex;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  img {
+    @include adaptiv-value("height", 16, 12, 1);
+    margin-right: 3px;
+  }
+}
+
+.snow {
+  display: flex;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  img {
+    @include adaptiv-value("height", 16, 12, 1);
+    margin-right: 3px;
+  }
+}
+
+.wind {
+  display: flex;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  img {
+    @include adaptiv-value("height", 16, 12, 1);
+    margin-right: 3px;
+  }
+}
+
+.pressure {
+  display: flex;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  img {
+    @include adaptiv-value("height", 16, 12, 1);
+    margin-right: 3px;
+  }
+}
+
+.humidity {
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+.dew_point {
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+.forecast_table {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  @include adaptiv-value("font-size", 16, 12, 1);
+}
+.row {
+
+}
+
+.column {
+  text-align: center;
+  padding: 5px;
+  &:first-child {
+    text-align: left;
+    text-transform: uppercase;
+    opacity: 0.7;
+    @include adaptiv-value("font-size", 12, 8, 1);
+  }
+}
+
+.bottom {
+  display: flex;
+  margin-top: 10px;
+}
+
+.sunrise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.sunrise_title {
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  @include adaptiv-value("font-size", 10, 6, 1);
+}
+
+.sunrise_time {
+  @include adaptiv-value("font-size", 20, 16, 1);
+}
+
+.sunset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sunset_title {
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  @include adaptiv-value("font-size", 10, 6, 1);
+}
+
+.sunset_time {
+  @include adaptiv-value("font-size", 20, 16, 1);
+}

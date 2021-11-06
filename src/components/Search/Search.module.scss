@@ -1,0 +1,76 @@
+@import "../../scss/AdaptivValue.scss";
+
+.Search {
+  background-color: #d1d1d1;
+  @include adaptiv-value("padding-top", 20, 10, 1);
+  @include adaptiv-value("padding-bottom", 20, 15, 1);
+}
+
+.container {
+  padding: 0 20px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.logo {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  @include adaptiv-value("font-size", 24, 20, 1);
+  @media (max-width: 768px) {
+    padding-bottom: 10px;
+  }
+}
+
+.search_form {
+  position: relative;
+  margin: 0 20px;
+  display: flex;
+  height: 35px;
+  width: 500px;
+  @media (max-width: 768px) {
+    @include adaptiv-value("width", 800, 300, 1);
+  }
+}
+
+.input_block {
+
+  flex-grow: 1;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  text-indent: 10px;
+  padding: 0;
+  @include adaptiv-value("font-size", 16, 12, 1);
+  transition: box-shadow 0.2s ease-out;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 8px 1px rgba(34, 60, 80, 0.2) inset;
+  }
+}
+
+.button {
+  border: none;
+  flex: 0 0 100px;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #474747;
+  color: white;
+  @include adaptiv-value("font-size", 16, 12, 1);
+  transition: opacity 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.7;
+  }
+}

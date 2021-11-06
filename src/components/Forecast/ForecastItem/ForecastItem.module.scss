@@ -1,0 +1,54 @@
+@import "../../../scss/AdaptivValue";
+
+.ForecastItem {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border-radius: 7px;
+  padding: 0 5px;
+  cursor: pointer;
+  @include adaptiv-value("font-size", 16, 12, 1);
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #d1d1d1;
+  }
+}
+
+.day {
+  flex: 0 0 30%;
+}
+
+.content {
+  flex: 0 0 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 45px;
+  img {
+    height: 100%;
+  }
+}
+
+.degrees {
+
+}
+
+.description {
+  @include adaptiv-value("font-size", 13, 9, 1);
+  color: #474747;
+}
+
+.arrow {
+  height: 20px;
+  img {
+   height: 100%;
+  }
+}
